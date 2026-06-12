@@ -72,6 +72,11 @@
     .hero .en { font-family: "Space Grotesk"; font-weight: 500; color: var(--muted); font-size: clamp(15px, 2.4vw, 19px); letter-spacing: .22em; text-transform: uppercase; margin-bottom: 26px; }
     .hero p.intro { font-size: 19px; color: #3a3d45; max-width: 640px; margin: 0 0 34px; }
 
+    .hero .wrap.hero-grid { display: flex; align-items: center; gap: 52px; }
+    .hero-left { flex: 1; min-width: 0; }
+    .hero-right { flex-shrink: 0; width: 300px; }
+    .hero-right img { width: 100%; height: 360px; object-fit: cover; border-radius: 22px; border: 1px solid var(--line); box-shadow: 0 20px 45px rgba(0,112,242,.14); background: #fff; }
+
     .stats { display: flex; flex-wrap: wrap; gap: 36px; margin-bottom: 34px; }
     .stat .num { font-family: "Space Grotesk"; font-size: 30px; font-weight: 700; color: var(--accent); line-height: 1; }
     .stat .lbl { font-size: 14px; color: var(--muted); margin-top: 6px; }
@@ -192,6 +197,9 @@
       .menu a { padding: 10px 0; }
       .menu-btn { display: block; }
       .about-grid { grid-template-columns: 1fr; gap: 28px; }
+      .hero .wrap.hero-grid { flex-direction: column; align-items: flex-start; gap: 34px; }
+      .hero-right { width: 100%; max-width: 280px; margin: 0 auto; }
+      .hero-right img { height: 320px; }
       .grid-3 { grid-template-columns: 1fr; }
       .lang-grid { grid-template-columns: 1fr; }
       .vision-grid { grid-template-columns: 1fr; }
@@ -226,28 +234,31 @@
 
   <!-- ===================== 히어로 ===================== -->
   <section class="hero" id="home">
-    <div class="wrap">
-      <div class="role">SAP Basis Consultant</div>
-      <h1>전소현</h1>
-      <div class="en">Jun Sohyun</div>
-      <p class="intro">
-        SAP 시스템이 멈추지 않고 안정적으로 돌아가도록 만드는 일을 합니다.
-        S/4HANA 컨버전과 대용량 마이그레이션, 인프라 운영과 보안 감사 대응까지 —
-        보이지 않는 곳에서 시스템의 신뢰성을 책임집니다.
-      </p>
-      <div class="stats">
-        <div class="stat"><div class="num">2023~</div><div class="lbl">ATNS Group 재직</div></div>
-        <div class="stat"><div class="num">10+</div><div class="lbl">고객사 프로젝트</div></div>
-        <div class="stat"><div class="num">S/4HANA</div><div class="lbl">컨버전·마이그레이션</div></div>
+    <div class="wrap hero-grid">
+      <div class="hero-left">
+        <div class="role">SAP Basis Consultant</div>
+        <h1>전소현</h1>
+        <div class="en">Jun Sohyun</div>
+        <p class="intro">
+          SAP 시스템이 멈추지 않고 안정적으로 돌아가도록 만드는 일을 합니다.
+          S/4HANA 컨버전과 대용량 마이그레이션, 인프라 운영과 보안 감사 대응까지 —
+          보이지 않는 곳에서 시스템의 신뢰성을 책임집니다.
+        </p>
+        <div class="stats">
+          <div class="stat"><div class="num">2023~</div><div class="lbl">ATNS Group 재직</div></div>
+          <div class="stat"><div class="num">10+</div><div class="lbl">고객사 프로젝트</div></div>
+          <div class="stat"><div class="num">S/4HANA</div><div class="lbl">컨버전·마이그레이션</div></div>
+        </div>
+        <div class="cta-row">
+          <a class="btn primary" href="mailto:sohyunjun.kr@gmail.com">📧 이메일 보내기</a>
+          <a class="btn ghost" href="#projects">프로젝트 보기</a>
+        </div>
       </div>
-      <div class="cta-row">
-        <a class="btn primary" href="mailto:sohyunjun.kr@gmail.com">📧 이메일 보내기</a>
-        <a class="btn ghost" href="#projects">프로젝트 보기</a>
+      <!-- ✏️ 사진: 저장소에 image 폴더를 만들어 사진을 넣고, 아래 파일명을 맞추세요 -->
+      <div class="hero-right">
+        <img src="./image/test.png" alt="전소현 프로필 사진" />
       </div>
     </div>
-     <div class="hero-right">
-          <img src="sap-logo.png" alt="SAP Logo" />
-     </div>   
   </section>
 
   <!-- ===================== 소개 ===================== -->
@@ -360,7 +371,7 @@
         <span class="client">ABL생명</span>
         <span class="client">라이나생명</span>
       </div>
-      <p class="clients-note">제조·건설·금융·물류 등 다양한 산업군의 SAP 시스템 컨버전과 운영을 담당했습니다.</p>
+      <p class="clients-note">고객사를 누르면 해당 프로젝트로 이동합니다. 제조·건설·금융·물류 등 다양한 산업군의 SAP 시스템 컨버전과 운영을 담당했습니다.</p>
     </div>
   </section>
 
